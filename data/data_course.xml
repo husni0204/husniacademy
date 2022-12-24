@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="course_1" model="husni_academy.course">
+        <field name="name">Course Technical Odoo16</field>
+        <field name="description">Course Technical Odoo 16 Ce</field>
+    </record>
+
+    <record id="course_2" model="husni_academy.course">
+        <field name="name">Course Technical React JS</field>
+        <field name="description">Course Technical Front End React JS</field>
+    </record>
+
+</odoo>

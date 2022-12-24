@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+        <menuitem id="husni_academy_menu_root" name="Husni Academy" sequence="20"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="husni_academy_master_menu_categ" 
+            name="Data Kursus" 
+            parent="husni_academy_menu_root" 
+            sequence="20"/>
+
+    </data>
+
+
+</odoo>

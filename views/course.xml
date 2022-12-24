@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- husni_academy.course tree view -->
+        <record id="husni_academy_course_view_tree" model="ir.ui.view">
+            <field name="name">husni_academy.course.view.tree</field>
+            <field name="model">husni_academy.course</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="name"/>
+                    <field name="category_id"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- husni_academy.course form view -->
+        <record id="husni_academy_course_view_form" model="ir.ui.view">
+            <field name="name">husni_academy.course.view.form</field>
+            <field name="model">husni_academy.course</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="category_id"/>
+                            </group>
+                            <group>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="Description" string="description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- husni_academy.course search view -->
+        <record id="model_name_view_search" model="ir.ui.view">
+            <field name="name">husni_academy.course.view.search</field>
+            <field name="model">husni_academy.course</field>
+            <field name="arch" type="xml">
+                <search string="Search Course">
+                    <!-- Add your fields here -->
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="category_id"/>
+
+                    <filter name="laravel" string="Laravel" domain="[('name', 'ilike', 'laravel')]" />
+                    <group string="Group By">
+                        <filter name="group_by_category" 
+                        string="Category" 
+                        context="{'group_by': 'category_id'}"/>
+                    </group>
+
+                </search>
+            </field>
+        </record>
+
+        <!-- husni_academy.course action window -->
+        <record id="husni_academy_course_action" model="ir.actions.act_window">
+            <field name="name">Course</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">husni_academy.course</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"></p>
+            </field>
+        </record>
+    </data>
+
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <!-- <menuitem id="husni_academy_menu_root" name="Husni Academy"/> -->
+
+    <!-- This Menu Item must have a parent and an action -->
+    <!-- <menuitem id="course_menu_act" name="Course" parent="husni_academy_menu_root" action="husni_academy_course_action" sequence="10"/> -->
+    <menuitem id="husni_academy_course_menu_act" 
+        name="Course Data" 
+        parent="husni_academy_master_menu_categ" 
+        action="husni_academy_course_action" 
+        sequence="10"/>
+</odoo>

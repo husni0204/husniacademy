@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_husni_academy_course,husni_academy.course,model_husni_academy_course,,1,1,1,1
+access_husniacademy_course_category,husniacademy.course.category,model_husniacademy_course_category,,1,1,1,1
+access_husniacademy_session,husniacademy_session,model_husniacademy_session,,1,1,1,1
+access_husniacademy_attendee,husniacademy_attendee,model_husniacademy_attendee,,1,1,1,1
