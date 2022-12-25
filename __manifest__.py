@@ -31,7 +31,8 @@
         'views/course_category.xml',
         'views/res_partner.xml',
         'views/session.xml',
-        'data/data_course.xml'
+        'data/data_course.xml',
+        'report/report_session.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
